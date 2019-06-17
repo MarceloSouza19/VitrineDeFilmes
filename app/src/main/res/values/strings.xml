@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Vitrine de Filmes</string>
+
+
+    <!-- Nome Apresentação!-->
+    <string name="vitrine">Vitrine</string>
+    <string name="voce_pode_gostar">Você também pode gostar:</string>
+    <string name="suas_escolhas">De acordo com sua escolha:</string>
+    <string name="filmes_menos_populares">Os filmes menos populares!</string>
+
+    <!-- URL !-->
+    <string name="url_cabecalho">https://api.themoviedb.org/3</string>
+    <string name="url_cabecalho_descobrir">https://api.themoviedb.org/3/discover/movie?</string>
+    <string name="url_linguagem">&amp;language=pt-BR</string>
+    <string name="url_popularidade">&amp;sort_by=popularity.desc</string>
+    <string name="url_ordenar_data_lancamento">&amp;sort_by=release_date.desc</string>
+    <string name="url_sem_popularidade">&amp;sort_by=popularity.asc</string>
+    <string name="url_imagem_filme">https://image.tmdb.org/t/p/w500</string>
+
+
+    <!-- APIKEY -->
+    <string name="api_key">api_key=COLOCAR_CODIGO_API_AQUI</string>
+    <string name="codigo_api_vazia">COLOCAR_CODIGO_API_AQUI</string>
+
+    <string name="mensagem_codigo_api">Caro programador, insira seu código da API em Strings.xml.</string>
+
+
+    <!-- API -->
+    <string name="results">results</string>
+    <string name="title">title</string>
+    <string name="release_date">release_date</string>
+    <string name="vote_average">vote_average</string>
+    <string name="overview">overview</string>
+    <string name="poster_path">poster_path</string>
+    <string name="backdrop_path">backdrop_path</string>
+    <string name="chave_api">chave_api</string>
+
+
+
+    <!-- DATA -->
+    <string name="yyyy_MM_dd">yyyy-MM-dd</string>
+    <string name="dd_MM_yy">dd/MM/yy</string>
+    <string name="EE_MMM_DD">EEE MMM dd HH:mm:ss zzz yyyy</string>
+
+    <!-- OUTROS -->
+    <string name="utf_8">UTF-8</string>
+    <string name="metodo_requisicao_get">GET</string>
+    <string name="resposta_api_nulo">null</string>
+
+    <!-- FILME -->
+    <string name="titulo_filme">tituloFilme</string>
+    <string name="sinopse_enredo">sinopseEnredo</string>
+    <string name="media_votos">mediaDeVotos</string>
+    <string name="data_lancamento">dataLancamento</string>
+    <string name="url_cartaz">urlCartazFilme</string>
+    <string name="url_fundo">urlFundoImagemFilme</string>
+
+
+    <!-- MENSAGENS -->
+    <string name="sem_sinopse">O filme está não contém uma sinopse disponível!</string>
+    <string name="sem_classificacao">Sem classificação</string>
+    <string name="nota">Nota</string>
+    <string name="carregandoConfigs">Carregando Configurações</string>
+
+
+    <!-- Modelo Busca-->
+    <string name="tipo_busca_vitrine">tipo_busca_vitrine</string>
+
+</resources>

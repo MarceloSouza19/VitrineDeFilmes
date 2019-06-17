@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="informacoes_categoria"
+        android:title="Informações" >
+
+        <ListPreference
+            android:key="tipo_busca_vitrine"
+            android:title="Prioridade De busca"
+            android:summary="Selecione a sessão de busca"
+            android:entryValues="@array/tipo_busca_values"
+            android:entries="@array/tipo_busca"/>
+    </PreferenceCategory>
+</PreferenceScreen>

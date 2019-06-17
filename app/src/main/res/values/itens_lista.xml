@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tipo_busca">
+        <item>Melhor Avaliado</item>
+        <item>Populares</item>
+    </string-array>
+
+    <string-array name="tipo_busca_values">
+        <item>/movie/top_rated?</item>
+        <item>/movie/popular?</item>
+    </string-array>
+
+</resources>
