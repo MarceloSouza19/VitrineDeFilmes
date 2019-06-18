@@ -5,6 +5,12 @@
         android:key="informacoes_categoria"
         android:title="Informações" >
 
+        <EditTextPreference
+            android:key="@string/codigo_api"
+            android:title="Código API"
+            android:dialogMessage="Coloque o seu código da API"
+            android:summary="Necessário para conectar com o servidor"/>
+
         <ListPreference
             android:key="tipo_busca_vitrine"
             android:title="Prioridade De busca"

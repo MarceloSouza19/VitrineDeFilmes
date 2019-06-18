@@ -54,9 +54,9 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
 
         ScrollView scrollView = findViewById(R.id.scrollView);
         RelativeLayout relativeLayoutMensagem = findViewById(R.id.falha);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        if ((getResources().getString(R.string.api_key).contains(getResources().getString(R.string.codigo_api_vazia)))) {
-
+        if (sharedPrefs.getString(getResources().getString(R.string.codigo_api), "").isEmpty()) {
             Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensagem_codigo_api), Toast.LENGTH_LONG).show();
             scrollView.setVisibility(View.GONE);
             relativeLayoutMensagem.setVisibility(View.VISIBLE);
@@ -87,16 +87,19 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
 
         linkAPI = new StringBuilder();
 
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         if (numeroLoader == 0) {
-            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
             linkAPI.append(getResources().getString(R.string.url_cabecalho));
             linkAPI.append(sharedPrefs.getString(getResources().getString(R.string.tipo_busca_vitrine), ""));
             linkAPI.append(getResources().getString(R.string.api_key));
+            linkAPI.append(sharedPrefs.getString(getResources().getString(R.string.codigo_api), ""));
             linkAPI.append(getResources().getString(R.string.url_linguagem));
         } else {
             linkAPI.append(getResources().getString(R.string.url_cabecalho_descobrir));
             linkAPI.append(getResources().getString(R.string.api_key));
+            linkAPI.append(sharedPrefs.getString(getResources().getString(R.string.codigo_api), ""));
             linkAPI.append(getResources().getString(R.string.url_linguagem));
         }
         if (numeroLoader == 1) {

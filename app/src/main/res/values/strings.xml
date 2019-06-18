@@ -19,8 +19,9 @@
 
 
     <!-- APIKEY -->
-    <string name="api_key">api_key=COLOCAR_CODIGO_API_AQUI</string>
-    <string name="codigo_api_vazia">COLOCAR_CODIGO_API_AQUI</string>
+    <string name="api_key">api_key=</string>
+    <string name="codigo_api">codigo_api</string>
+    <!-- O código da API pode ser preenchido agora via interface, em configurações!-->
 
     <string name="mensagem_codigo_api">Caro programador, insira seu código da API em Strings.xml.</string>
 

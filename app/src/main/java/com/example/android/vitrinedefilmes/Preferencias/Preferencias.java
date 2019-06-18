@@ -51,6 +51,7 @@ public class Preferencias extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.configuracoes);
 
+            bindSummaryValue(findPreference(getString(R.string.codigo_api)));
             bindSummaryValue(findPreference(getString(R.string.tipo_busca_vitrine)));
 
         }
