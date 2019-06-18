@@ -24,6 +24,7 @@
     <!-- O código da API pode ser preenchido agora via interface, em configurações!-->
 
     <string name="mensagem_codigo_api">Caro programador, insira seu código da API em Strings.xml.</string>
+    <string name="mensagem_erro_conexao">Verifique a API digitada ou a conexão com a internet.</string>
 
 
     <!-- API -->

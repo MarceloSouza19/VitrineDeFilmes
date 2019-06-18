@@ -37,12 +37,12 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
     private static final int PRIMEIRA_POSICAO_LOADER = 0;
     private static final int SEGUNDA_POSICAO_LOADER = 1;
     private static final int TERCEIRA_POSICAO_LOADER = 2;
+    private static final int QUARTA_POSICAO_LOADER = 2;
+
 
     StringBuilder linkAPI = new StringBuilder();
 
-    List<Filme> vitrineFilmes;
-    List<Filme> gridFilmes;
-    List<Filme> vitrineNaoPopularFilmes;
+    private List<Filme> gridFilmes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,8 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
             scrollView.setVisibility(View.GONE);
             relativeLayoutMensagem.setVisibility(View.VISIBLE);
         } else {
+
+            getSupportLoaderManager().initLoader(QUARTA_POSICAO_LOADER , null, this).forceLoad();
             scrollView.setVisibility(View.VISIBLE);
             relativeLayoutMensagem.setVisibility(View.GONE);
 
@@ -117,7 +119,6 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
         GridView gridViewFilme = findViewById(R.id.gridLayoutFilme);
 
         if (loader.getId() == 0) {
-            vitrineFilmes = filmes;
             RecyclerView recyclerViewFilme = findViewById(R.id.recyclerViewFilme);
             recyclerViewFilme.setAdapter(new AdaptadorFilmeRecyclerView(getApplicationContext(), filmes));
             recyclerViewFilme.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -125,7 +126,6 @@ public class TelaInicial extends AppCompatActivity implements LoaderManager.Load
             gridFilmes = filmes;
             gridViewFilme.setAdapter(new GridAdapter(getApplicationContext(), filmes));
         } else if (loader.getId() == 2) {
-            vitrineNaoPopularFilmes = filmes;
             RecyclerView recyclerViewFilme = findViewById(R.id.recyclerViewFilmeNaoPopular);
             recyclerViewFilme.setAdapter(new AdaptadorFilmeRecyclerView(getApplicationContext(), filmes));
             recyclerViewFilme.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
